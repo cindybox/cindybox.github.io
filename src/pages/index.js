@@ -17,25 +17,36 @@ import projectdata from "../projectInfo.json"
 // import Contact from "../components/Contact"
 
 class IndexPage extends Component {
-  state = { windowWidth: window.innerWidth }
-
+  state = { windowWidth: 0 }
   updateWindowSize = () => {
     const currentWindowSize = window.innerWidth
-
     if (currentWindowSize !== this.state.windowWidth) {
       this.setState({
         windowWidth: currentWindowSize,
       })
     }
+    console.log(this.state.windowWidth)
+  }
+
+  onResize = () => {
+    if (resizeId) {
+      clearTimeout(resizeId)
+    }
+    let resizeId
+    resizeId = setTimeout(this.updateWindowSize(), 500)
+  }
+
+  componentDidMount() {
+    this.setState({ windowWidth: window.innerWidth })
+    this.onResize()
+    window.onresize = this.onResize
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.onResize)
   }
 
   render() {
-    let resizeId
-    window.addEventListener("resize", () => {
-      clearTimeout(resizeId)
-      resizeId = setTimeout(this.updateWindowSize(), 500)
-    })
-
     return (
       <Layout>
         <Navbar />
