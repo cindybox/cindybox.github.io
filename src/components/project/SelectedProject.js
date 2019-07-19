@@ -3,6 +3,7 @@ import React from "react"
 // import { Link } from "gatsby"
 // import IntroContainer from "./IntroContainer"
 import styled from "styled-components"
+
 const Img = props => (
   <div className="col-12 col-lg-6">
     <a href={props.projectInfo.projectUrl}>
@@ -61,13 +62,8 @@ const Text = props => (
 const SelectedProject = props => {
   return (
     <ProjectContainer imageLeft={props.imageLeft}>
-      {" "}
       <div className="row my-5">
         <section id="projects" class="project container mb-3">
-          {/*  <div>
-          <h3 class="section-title mb-5">PROJECTS</h3>
-        </div>*/}
-
           <div class="container text-center mt-5">
             <div class="row mt-5 mb-5">
               {props.imageLeft === "true" ? (
