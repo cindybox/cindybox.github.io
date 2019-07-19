@@ -18,7 +18,6 @@ class IndexPage extends Component {
       <Layout>
         <Navbar />
         <Intro />
-
         <Media query="(max-width:1049px)">
           {matches =>
             matches
@@ -33,6 +32,7 @@ class IndexPage extends Component {
                 ))
           }
         </Media>
+
         <Footer />
       </Layout>
     )
