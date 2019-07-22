@@ -30,7 +30,7 @@ const AboutPage = () => (
 
     <Navbar />
     <AboutContainer>
-      <div className="container mt-5">
+      <div className="container mt-5 p-5">
         {" "}
         <div className="row mb-5">
           <div className="col-10 col-md-4  mx-auto">
@@ -46,7 +46,7 @@ const AboutPage = () => (
             </div>
 
             <p className="about-desc mt-3" style={{ lineHeight: "1.8rem" }}>
-              I am a problem solver. That is both design and coding are so
+              I am a problem solver. That is why both design and coding are so
               intriguing to me.
               <br style={{ lineHeight: "3rem" }} />
               I have been a landscape architect for years. This experience has

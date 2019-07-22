@@ -11,27 +11,21 @@ import Intro from "../components/intro/Intro"
 import About from "../components/About"
 import SelectedProject from "../components/project/SelectedProject"
 import projectdata from "../projectInfo.json"
-import Media from "react-media"
+// import Media from "react-media"
+
 class IndexPage extends Component {
   render() {
     return (
       <Layout>
         <Navbar />
         <Intro />
-        <Media query="(max-width:1049px)">
-          {matches =>
-            matches
-              ? projectdata.projects.map(project => (
-                  <SelectedProject projectInfo={project} imageLeft="true" />
-                ))
-              : projectdata.projects.map(project => (
-                  <SelectedProject
-                    projectInfo={project}
-                    imageLeft={project.imageLeft}
-                  />
-                ))
-          }
-        </Media>
+
+        {projectdata.projects.map(project => (
+          <SelectedProject
+            projectInfo={project}
+            imageLeft={project.imageLeft}
+          />
+        ))}
 
         <Footer />
       </Layout>

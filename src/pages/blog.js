@@ -21,7 +21,7 @@ const Portfolio = () => (
   <Layout background="white">
     <SEO title="Portfolio" />
     <Navbar />
-    <div className="container">
+    <div className="container-fluid">
       <div className="row">
         <div className="col-10 mx-auto">
           <div className="project-title ">Methodology</div>

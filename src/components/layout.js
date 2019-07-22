@@ -7,15 +7,16 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import "./bootstrap.min.css"
-
+import { BrowserRouter as Router } from "react-router-dom"
 import styled from "styled-components"
 // import { useStaticQuery, graphql } from "gatsby"
-
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import "../../node_modules/bootstrap/dist/js/bootstrap.min.js"
+import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
 // import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }, props) => <> {children}</>
+const Layout = ({ children }, props) => <Router> {children}</Router>
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
