@@ -47,4 +47,4 @@ const Portfolio = () => (
   </Layout>
 )
 
-export default Portfolio
+export default Blog
