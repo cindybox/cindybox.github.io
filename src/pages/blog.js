@@ -17,9 +17,9 @@ import page4 from "../images/planterlanddesign/planterlandpage_Page_4.jpg"
 import page5 from "../images/planterlanddesign/planterlandpage_Page_5.jpg"
 import page6 from "../images/planterlanddesign/planterlandpage_Page_6.jpg"
 import page7 from "../images/planterlanddesign/planterlandpage_Page_7.jpg"
-const Portfolio = () => (
+const Blog = () => (
   <Layout background="white">
-    <SEO title="Portfolio" />
+    <SEO title="Blog" />
     <Navbar />
     <div className="container-fluid">
       <div className="row">

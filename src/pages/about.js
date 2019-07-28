@@ -26,7 +26,7 @@ import {
 
 const AboutPage = () => (
   <Layout>
-    <SEO title="about" />
+    <SEO title="About" />
 
     <Navbar />
     <AboutContainer>
