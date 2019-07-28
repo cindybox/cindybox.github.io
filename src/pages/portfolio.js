@@ -9,7 +9,6 @@ import Footer from "../globals/Footer"
 import styled from "styled-components"
 import ProjectSmall from "../components/project/ProjectSmall"
 
-// import SelectedProject from "../components/Project/SelectedProject"
 import page1 from "../images/planterlanddesign/planterlandpage_Page_1.jpg"
 import page2 from "../images/planterlanddesign/planterlandpage_Page_2.jpg"
 import page3 from "../images/planterlanddesign/planterlandpage_Page_3.jpg"
@@ -21,34 +20,41 @@ const Portfolio = () => (
   <Layout>
     <SEO title="Portfolio" />
     <Navbar />
-    <div className="container-fluid mt-5">
-      <div className="row">
-        <div className="col-12 col-md-4 col-lg-3">
-          <img src={page1} />
-        </div>
-        <div className="col-12 col-md-4 col-lg-3">
-          <img src={page1} />
-        </div>
-        <div className="col-12 col-md-4 col-lg-3">
-          <img src={page1} />
-        </div>
-        <div className="col-12 col-md-4 col-lg-3">
-          <img src={page1} />
-        </div>
-
-        <div className="col-12 col-md-4 col-lg-3">
-          <img src={page1} />
-        </div>
-        <div className="col-12 col-md-4 col-lg-3">
-          <img src={page1} />
-        </div>
-        <div className="col-12 col-md-4 col-lg-3">
-          <img src={page1} />
-        </div>
-        <div className="col-12 col-md-4 col-lg-3">
-          <img src={page1} />
-        </div>
+    <div
+      className="container-fluid mt-5 d-flex align-items-center "
+      style={{ height: "75vh" }}
+    >
+      <div className="col-10 text-center mx-auto">
+        <h5> THIS PAGE IS UNDER DEVELOPMENT</h5>
       </div>
+
+      {/* <div className="row">
+      <div className="col-12 col-md-4 col-lg-3">
+        <img src={page1} />
+      </div>
+      <div className="col-12 col-md-4 col-lg-3">
+        <img src={page1} />
+      </div>
+      <div className="col-12 col-md-4 col-lg-3">
+        <img src={page1} />
+      </div>
+      <div className="col-12 col-md-4 col-lg-3">
+        <img src={page1} />
+      </div>
+
+      <div className="col-12 col-md-4 col-lg-3">
+        <img src={page1} />
+      </div>
+      <div className="col-12 col-md-4 col-lg-3">
+        <img src={page1} />
+      </div>
+      <div className="col-12 col-md-4 col-lg-3">
+        <img src={page1} />
+      </div>
+      <div className="col-12 col-md-4 col-lg-3">
+        <img src={page1} />
+      </div>
+    </div>*/}
     </div>
 
     {/*  {Planterlanddesign.map(imgurl => (

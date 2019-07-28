@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import logo from "../images/logo.png"
 import styled from "styled-components"
 import { withRouter } from "react-router-dom"
-
+import { IoMdMenu } from "react-icons/io"
 class NavbarPage extends Component {
   state = {
     navbarOpen: false,
@@ -24,8 +24,8 @@ class NavbarPage extends Component {
     return (
       <NavContainer pathname={this.state.pathname}>
         <nav className=" navbar navbar-expand-sm navbar-dark bg-dark">
-          <Link class="nav-brand" to="/">
-            <img src={logo} width="36rem" />
+          <Link className="nav-brand ml-2 ml-md-3 my-auto" to="/">
+            <img src={logo} width="36rem" className="my-auto" />
           </Link>
 
           <button
@@ -37,33 +37,41 @@ class NavbarPage extends Component {
             aria-expanded="true"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon" />
+            <IoMdMenu style={{ color: "var(--mainGrey)" }} />
           </button>
 
           <div class="collapse  navbar-collapse" id="navbarTogglerList">
-            <ul className="navbar-nav ml-auto mt-2 mr-5 ">
-              <li className="nav-item ml-lg-5">
+            <ul className="navbar-nav ml-auto mt-2 mr-md-0 mr-lg-5 ">
+              <li className="nav-item mx-md-auto ml-lg-5">
                 <Link to="/" className="nav-link">
-                  HOME
-                  <div className="navborder" id="homeborder"></div>
+                  <div className="col-3 col-sm-auto mx-auto text-center">
+                    HOME
+                    <div className="navborder mx-2" id="homeborder"></div>
+                  </div>
                 </Link>
               </li>
               <li className="nav-item ml-lg-5">
                 <Link to="/about" className="nav-link">
-                  ABOUT
-                  <div className="navborder" id="aboutborder"></div>
+                  <div className="col-3 col-sm-auto mx-auto text-center">
+                    ABOUT
+                    <div className="navborder mx-2" id="aboutborder"></div>
+                  </div>
                 </Link>
               </li>
               <li className="nav-item ml-lg-5">
                 <Link to="/portfolio" className="nav-link">
-                  PORTFOLIO
-                  <div className="navborder" id="portfolioborder"></div>
+                  <div className="col-3 col-sm-auto mx-auto text-center">
+                    PORTFOLIO
+                    <div className="navborder mx-2" id="portfolioborder"></div>
+                  </div>
                 </Link>
               </li>
               <li className="nav-item ml-lg-5">
                 <Link to="/blog" className="nav-link">
-                  BLOG
-                  <div className="navborder" id="blogborder"></div>
+                  <div className="col-3 col-sm-auto mx-auto text-center">
+                    BLOG
+                    <div className="navborder mx-2" id="blogborder"></div>
+                  </div>
                 </Link>
               </li>
             </ul>
@@ -84,6 +92,7 @@ const NavContainer = styled.nav`
   .nav-item {
     position: relative;
   }
+
   .navborder {
     position: absolute;
     top: 0;

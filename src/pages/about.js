@@ -31,18 +31,17 @@ const AboutPage = () => (
     <Navbar />
     <AboutContainer>
       <div className="container mt-5 p-5">
-        {" "}
         <div className="row mb-5">
           <div className="col-10 col-md-4  mx-auto">
             <div className="d-flex justify-content-center">
               <img src={profile} alt="profile" className="profilepic" />
             </div>
           </div>
-          <div className="col-10 col-md-8">
+          <div className="col-10 col-md-8 mx-auto">
             <div className="border-bottom">
               {" "}
               <h3 style={{ color: "var(--mainDark)" }}> Design + Code </h3>
-              <h5 className="mb-3"> Endless Possibility </h5>{" "}
+              <h5 className="mb-3"> Endless Possibility </h5>
             </div>
 
             <p className="about-desc mt-3" style={{ lineHeight: "1.8rem" }}>
@@ -99,7 +98,7 @@ const AboutPage = () => (
 
 const AboutContainer = styled.div`
   color: var(--mainGrey) !important;
-  height: 70vh;
+  /* height: 80%; */
   .profilepic {
     width: 200px;
     height: 300px;

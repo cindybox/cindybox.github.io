@@ -71,7 +71,7 @@ const SelectedProject = props => {
       <div className="row my-5">
         <section id="projects" class="project container mb-3">
           <div class="container text-center mt-5">
-            <div class="row mt-5 mb-5">
+            <div class="row mt-5 mb-5 p-3">
               {props.imageLeft === "true" ? (
                 <React.Fragment>
                   <Img projectInfo={props.projectInfo} />
