@@ -8,7 +8,6 @@ import Navbar from "../globals/Navbar"
 import Footer from "../globals/Footer"
 import Intro from "../components/intro/Intro"
 
-import About from "../components/About"
 import SelectedProject from "../components/project/SelectedProject"
 import projectdata from "../projectInfo.json"
 // import Media from "react-media"

@@ -6,7 +6,7 @@
       "projectUrl": "https://planterland.herokuapp.com/",
       "githubUrl": "https://github.com/cindybox/Shopping---Planterland",
       "projectType": "Personal Project. Design and Develop",
-      "projectDescription": "This is a brand new endeavour to bring a fresh type of service targeted at designers, contractors and suppliers, it sells a collection of high-end planters but not just that. Designers often hustle among various outdoor product stores to find planter product that will work for the project, and it is often painful to put together all that information to communicate with others in the project. The goal is to build a minimalist and modern looking site that is easy to navigate for designers. It also needs to give designers the feeling of control, makes it easy for them to find planters by various criteria and share information easily with others. ",
+      "projectDescription": "<li>UI, UX and Branding Elements Designed and Prototyped in Adobe XD, Adobe Indesign, and Adobe Photoshop</li> <li>MongoDB-Express-React-Node stack development</li><li>User Authentication with Passport</li><li>Utilized React Context to pass Props</li><li>Fully Responsive Design</li>",
       "imageLeft": "true"
     },
 
@@ -16,7 +16,7 @@
       "projectUrl": "https://optimistic-khorana-27037b.netlify.com/",
       "githubUrl": "https://github.com/chingu-voyages/v9-geckos-team-19",
       "projectType": "Team Project. Part of UI, build landing and two components",
-      "projectDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "projectDescription": "<li>UI Design in Photoshop</li><li>Front end developed in React</li><li>Utilized Telescope API</li><li>Fully Responsive Design</li>",
       "imageLeft": "false"
     },
     {
@@ -25,7 +25,7 @@
       "projectUrl": "https://glacial-savannah-17506.herokuapp.com/",
       "githubUrl": "https://github.com/cindybox/Connect4",
       "projectType": "Personal Project. Design and Develop",
-      "projectDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "projectDescription": "<li>UI Design in Photoshop</li><li>Front end developed in React</li><li>Fully Responsive Design</li>",
       "imageLeft": "true"
     }
   ]

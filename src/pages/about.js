@@ -24,7 +24,7 @@ import {
   DiJava,
 } from "react-icons/di"
 
-const AboutPage = () => (
+const About = () => (
   <Layout>
     <SEO title="About" />
 
@@ -177,4 +177,4 @@ const AboutContainer = styled.div`
   }
 `
 
-export default AboutPage
+export default About

@@ -7,9 +7,7 @@ import Navbar from "../globals/Navbar"
 import Footer from "../globals/Footer"
 
 import styled from "styled-components"
-import ProjectSmall from "../components/project/ProjectSmall"
 
-// import SelectedProject from "../components/Project/SelectedProject"
 import page1 from "../images/planterlanddesign/planterlandpage_Page_1.jpg"
 import page2 from "../images/planterlanddesign/planterlandpage_Page_2.jpg"
 import page3 from "../images/planterlanddesign/planterlandpage_Page_3.jpg"
@@ -17,6 +15,7 @@ import page4 from "../images/planterlanddesign/planterlandpage_Page_4.jpg"
 import page5 from "../images/planterlanddesign/planterlandpage_Page_5.jpg"
 import page6 from "../images/planterlanddesign/planterlandpage_Page_6.jpg"
 import page7 from "../images/planterlanddesign/planterlandpage_Page_7.jpg"
+
 const Blog = () => (
   <Layout background="white">
     <SEO title="Blog" />

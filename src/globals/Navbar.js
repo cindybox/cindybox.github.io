@@ -2,88 +2,100 @@ import React, { Component } from "react"
 import { Link } from "gatsby"
 import logo from "../images/logo.png"
 import styled from "styled-components"
-import { withRouter } from "react-router-dom"
+import { Location } from "@reach/router"
+// import { withRouter } from "react-router-dom"
 import { IoMdMenu } from "react-icons/io"
-class NavbarPage extends Component {
+
+import { Navbar, Nav } from "react-bootstrap"
+
+class NavPage extends Component {
   state = {
     navbarOpen: false,
     pathname: "",
   }
   componentDidMount = () => {
-    this.setLocation()
-    console.log("set path to current page location")
+    // this.setLocation()
   }
 
   setLocation = () => {
+    console.log(this.props.location)
     let pathname = this.props.location.pathname.slice(1)
-    console.log(pathname === "about")
     this.setState({ pathname: pathname })
   }
 
   render() {
     return (
-      <NavContainer pathname={this.state.pathname}>
-        <nav className=" navbar navbar-expand-sm navbar-dark bg-dark">
-          <Link className="nav-brand ml-2 ml-md-3 my-auto" to="/">
-            <img src={logo} width="36rem" className="my-auto" />
-          </Link>
+      <Location>
+        {({ location }) => (
+          <NavContainer pathname={location.pathname.slice(1)}>
+            <Navbar bg="light" expand="sm" className="navbar-expand-sm">
+              <Navbar.Brand>
+                <Link className="ml-2 ml-md-3 my-auto" to="/">
+                  <img src={logo} width="36rem" className="my-auto" />
+                </Link>
+              </Navbar.Brand>
 
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarTogglerList"
-            aria-controls="navbarTogglerList"
-            aria-expanded="true"
-            aria-label="Toggle navigation"
-          >
-            <IoMdMenu style={{ color: "var(--mainGrey)" }} />
-          </button>
+              <Navbar.Toggle aria-controls="basic-navbar-nav">
+                <IoMdMenu style={{ color: "var(--mainGrey)" }} />
+              </Navbar.Toggle>
 
-          <div class="collapse  navbar-collapse" id="navbarTogglerList">
-            <ul className="navbar-nav ml-auto mt-2 mr-md-0 mr-lg-5 ">
-              <li className="nav-item mx-md-auto ml-lg-5">
-                <Link to="/" className="nav-link">
-                  <div className="col-3 col-sm-auto mx-auto text-center">
-                    HOME
-                    <div className="navborder mx-2" id="homeborder"></div>
-                  </div>
-                </Link>
-              </li>
-              <li className="nav-item ml-lg-5">
-                <Link to="/about" className="nav-link">
-                  <div className="col-3 col-sm-auto mx-auto text-center">
-                    ABOUT
-                    <div className="navborder mx-2" id="aboutborder"></div>
-                  </div>
-                </Link>
-              </li>
-              <li className="nav-item ml-lg-5">
-                <Link to="/portfolio" className="nav-link">
-                  <div className="col-3 col-sm-auto mx-auto text-center">
-                    PORTFOLIO
-                    <div className="navborder mx-2" id="portfolioborder"></div>
-                  </div>
-                </Link>
-              </li>
-              <li className="nav-item ml-lg-5">
-                <Link to="/blog" className="nav-link">
-                  <div className="col-3 col-sm-auto mx-auto text-center">
-                    BLOG
-                    <div className="navborder mx-2" id="blogborder"></div>
-                  </div>
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </NavContainer>
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className=" ml-auto mt-2 mr-md-0 mr-lg-5 ">
+                  <li className="nav-item mx-md-auto ml-lg-5">
+                    <Link to="/" className="nav-link">
+                      <div className="col-5 col-sm-auto mx-auto text-center">
+                        HOME
+                        <div
+                          className="navborder  mx-sm-4 mx-md-2 mx-lg-1"
+                          id="homeborder"
+                        ></div>
+                      </div>
+                    </Link>
+                  </li>
+                  <li className="nav-item ml-lg-5">
+                    <Link to="/about" className="nav-link">
+                      <div className="col-5 col-sm-auto mx-auto text-center">
+                        ABOUT
+                        <div
+                          className="navborder  mx-sm-4 mx-md-2 mx-lg-1"
+                          id="aboutborder"
+                        ></div>
+                      </div>
+                    </Link>
+                  </li>
+                  <li className="nav-item ml-lg-5">
+                    <Link to="/portfolio" className="nav-link">
+                      <div className="col-5 col-sm-auto mx-auto text-center">
+                        PORTFOLIO
+                        <div
+                          className="navborder  mx-sm-4 mx-md-2 mx-lg-1"
+                          id="portfolioborder"
+                        ></div>
+                      </div>
+                    </Link>
+                  </li>
+                  <li className="nav-item ml-lg-5">
+                    <Link to="/blog" className="nav-link">
+                      <div className="col-5 col-sm-auto mx-auto text-center">
+                        BLOG
+                        <div
+                          className="navborder mx-sm-4 mx-md-2 mx-lg-1"
+                          id="blogborder"
+                        ></div>
+                      </div>
+                    </Link>
+                  </li>
+                </Nav>
+              </Navbar.Collapse>
+            </Navbar>
+          </NavContainer>
+        )}
+      </Location>
     )
   }
 }
 
 const NavContainer = styled.nav`
-  nav .navbar,
   .navbar-expand-sm {
     background-color: var(--mainWhite) !important;
     color: white !important;
@@ -136,5 +148,5 @@ const NavContainer = styled.nav`
     }
   }
 `
-let Navbar = withRouter(NavbarPage)
-export default Navbar
+// const NavPage = withRouter(NavbarPage)
+export default NavPage

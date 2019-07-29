@@ -1,9 +1,13 @@
 import React from "react"
-// import { FaArrowDown } from "react-icons/fa"
-// import { Link } from "gatsby"
-// import IntroContainer from "./IntroContainer"
+
 import styled from "styled-components"
 import classNames from "classnames"
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2,
+} from "react-html-parser"
+
 const Img = props => (
   <div className="col-12 col-lg-6 p-3">
     <div className="projectImageContainer">
@@ -44,11 +48,12 @@ const Text = props => (
     <p class="project-desc mt-4">
       <strong>
         <em style={{ color: "var(--lightGrey)" }}>
-          {props.projectInfo.projectType}{" "}
+          {props.projectInfo.projectType}
         </em>
       </strong>
       <br />
-      {`${props.projectInfo.projectDescription.slice(0, 300)}...`}
+      <br />
+      <ul>{ReactHtmlParser(props.projectInfo.projectDescription)} </ul>
     </p>
     <div className="text-right">
       <a class="moreInfo text-muted border-bottom " href="#">

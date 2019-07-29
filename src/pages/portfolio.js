@@ -7,7 +7,6 @@ import Navbar from "../globals/Navbar"
 import Footer from "../globals/Footer"
 
 import styled from "styled-components"
-import ProjectSmall from "../components/project/ProjectSmall"
 
 import page1 from "../images/planterlanddesign/planterlandpage_Page_1.jpg"
 import page2 from "../images/planterlanddesign/planterlandpage_Page_2.jpg"
