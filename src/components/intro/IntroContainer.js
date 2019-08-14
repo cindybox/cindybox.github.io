@@ -14,7 +14,7 @@ const IntroContainer = styled.div`
     line-height: 6rem;
     font-family: "Avenir Next", sans-serif;
 
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.15rem;
     /* font-weight: bold; */
   }
 
