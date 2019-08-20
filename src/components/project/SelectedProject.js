@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from "gatsby"
 import styled from "styled-components"
 import classNames from "classnames"
 import ReactHtmlParser, {
@@ -56,9 +56,12 @@ const Text = props => (
       <ul>{ReactHtmlParser(props.projectInfo.projectDescription)} </ul>
     </p>
     <div className="text-right">
-      <a class="moreInfo text-muted border-bottom " href="#">
+      <Link
+        to={props.projectInfo.moreinfo}
+        className="moreInfo text-muted border-bottom "
+      >
         More Info
-      </a>
+      </Link>
     </div>
   </div>
 )

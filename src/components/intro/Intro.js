@@ -2,6 +2,7 @@ import React from "react"
 import { FaArrowDown } from "react-icons/fa"
 import { Link } from "gatsby"
 import IntroContainer from "./IntroContainer"
+import { Transition } from "react-spring/renderprops"
 
 const Intro = () => (
   <div>
@@ -9,12 +10,62 @@ const Intro = () => (
       <section id="intro" class="container intro mt-5 pt-5">
         <div className="col">
           <h1 class="intro-p1 mb-5">
-            <span className="hi"> HI,</span> I AM
-            <br />
-            <div className="mb-2 mt-2">
-              <strong> XINGLIANG TONG</strong>
+            <span className="hi">
+              <Transition
+                items={[{ text: "HI, I AM", key: 1 }]}
+                keys={item => item.key}
+                from={{ transform: "translate3d(0,-25rem,0)" }}
+                enter={{ transform: "translate3d(0,0px,0)" }}
+                leave={{ transform: "translate3d(0,-25rem,0)" }}
+                className={item => item.className}
+              >
+                {item => props => (
+                  <div style={props} className={props.className}>
+                    {item.text}
+                  </div>
+                )}
+              </Transition>
+            </span>
+            <div className="mb-2 ">
+              <strong>
+                <span>
+                  <Transition
+                    items={[
+                      {
+                        text: "XINGLIANG TONG",
+                        key: 2,
+                        className: "font-weight-bold",
+                      },
+                    ]}
+                    keys={item => item.key}
+                    from={{ transform: "translate3d(0,-100rem,0)" }}
+                    enter={{ transform: "translate3d(0,0px,0)" }}
+                    leave={{ transform: "translate3d(0,-100rem,0)" }}
+                    className={item => item.className}
+                  >
+                    {item => props => (
+                      <div style={props} className={props.className}>
+                        {item.text}
+                      </div>
+                    )}
+                  </Transition>
+                </span>
+              </strong>
             </div>
-            I DESIGN AND BUILD WEB APPLICATIONS
+            <Transition
+              items={[{ text: "I DESIGN AND BUILD WEB APPLICATIONS", key: 3 }]}
+              keys={item => item.key}
+              from={{ transform: "translate3d(0,-235rem,0)" }}
+              enter={{ transform: "translate3d(0,0px,0)" }}
+              leave={{ transform: "translate3d(0,-235rem,0)" }}
+              className={item => item.className}
+            >
+              {item => props => (
+                <div style={props} className={props.className}>
+                  {item.text}
+                </div>
+              )}
+            </Transition>
           </h1>
 
           <h1 class="text-subtitle">

@@ -20,7 +20,7 @@ const Blog = () => (
   <Layout background="white">
     <SEO title="Blog" />
     <Navbar />
-    <div className="container-fluid">
+    <div className="container">
       <div className="row">
         <div className="col-10 mx-auto">
           <div className="project-title ">Methodology</div>

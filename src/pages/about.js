@@ -52,9 +52,10 @@ const About = () => (
               not only given me a keen sense of aesthetics, but more
               importantly, how to design around users.
               <br style={{ lineHeight: "3rem" }} />
-              Now I design and build apps that focus on enhanced user
-              experience. I strive to build better,lighter, and more effective
-              applications. Learning is my superpower.
+              Now I design and build web applications that focus on enhanced
+              user experience. Leveraging on my prior experience working in the
+              design field, a versatile skillset, and strong learning ability, I
+              bring insight, innovation, and effeciency to my work.
               <br />
               <br />
             </p>

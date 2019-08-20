@@ -63,6 +63,10 @@ footer {
   border-color: var(--brightGreen) !important;
   color: var(--brightGreen) !important;
 }
+.btn-solidgreen {
+  background: var(--brightGreen) !important;
+  color: var(--mainGrey) !important;
+}
 
 .btn:hover {
   background: var(--brightGreen) !important;
