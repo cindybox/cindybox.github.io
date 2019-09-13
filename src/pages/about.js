@@ -29,12 +29,7 @@ const About = () => (
 		<SEO title="About" />
 
 		<Navbar />
-		<img
-			height="1"
-			width="1"
-			style="display:none"
-			src="https://www.facebook.com/tr?id=434709127166530&ev=PageView&noscript=1"
-		/>
+
 		<AboutContainer>
 			<div className="container mt-5 p-5">
 				<div className="row mb-5">
