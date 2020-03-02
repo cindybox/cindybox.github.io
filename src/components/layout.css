@@ -20,11 +20,16 @@ footer {
   font-family: "Calibri", sans-serif;
   background: var(--mainWhite) !important;
 }
-
+.project_content {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 0.8rem;
+}
 .social-icon {
   color: var(--mainGrey) !important;
 }
-
+.medx {
+  background-color: #fff;
+}
 /*text type*/
 
 .text-subtitle {

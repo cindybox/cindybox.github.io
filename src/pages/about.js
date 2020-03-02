@@ -57,12 +57,12 @@ const About = () => (
 							<br />
 							<br />
 						</p>
-						<div className="text-subtitle text-capitalize ">
+						{/* <div className="text-subtitle text-capitalize ">
 							Check One of My Design Case Study&emsp;
 							<Link to="/blog">
 								<FaArrowRight style={{ color: 'var(--brightGreen)', fontSize: '120%' }} />
 							</Link>
-						</div>
+						</div> */}
 						<div className="text-subtitle text-capitalize ">
 							find my resume here&emsp;
 							<Link to="/resume">

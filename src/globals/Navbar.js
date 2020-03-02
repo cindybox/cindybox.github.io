@@ -64,9 +64,9 @@ class NavPage extends Component {
                     </Link>
                   </li>
                   <li className="nav-item ml-lg-5">
-                    <Link to="/portfolio" className="nav-link">
+                    <Link to="/medx" className="nav-link">
                       <div className="col-5 col-sm-auto mx-auto text-center">
-                        PORTFOLIO
+                        CASE STUDY
                         <div
                           className="navborder  mx-sm-4 mx-md-2 mx-lg-1"
                           id="portfolioborder"
@@ -74,7 +74,7 @@ class NavPage extends Component {
                       </div>
                     </Link>
                   </li>
-                  <li className="nav-item ml-lg-5">
+                  {/* <li className="nav-item ml-lg-5">
                     <Link to="/blog" className="nav-link">
                       <div className="col-5 col-sm-auto mx-auto text-center">
                         BLOG
@@ -84,7 +84,7 @@ class NavPage extends Component {
                         ></div>
                       </div>
                     </Link>
-                  </li>
+                  </li> */}
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
