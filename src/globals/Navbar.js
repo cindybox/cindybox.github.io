@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import logo from "../images/logo.png"
 import styled from "styled-components"
 import { Location } from "@reach/router"
-// import { withRouter } from "react-router-dom"
 import { IoMdMenu } from "react-icons/io"
 
 import { Navbar, Nav } from "react-bootstrap"
@@ -31,7 +30,12 @@ class NavPage extends Component {
             <Navbar bg="light" expand="sm" className="navbar-expand-sm">
               <Navbar.Brand>
                 <Link className="ml-2 ml-md-3 my-auto" to="/">
-                  <img src={logo} width="36rem" className="my-auto" />
+                  <img
+                    src={logo}
+                    width="36rem"
+                    className="my-auto"
+                    alt="logo"
+                  />
                 </Link>
               </Navbar.Brand>
 
@@ -41,14 +45,11 @@ class NavPage extends Component {
 
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className=" ml-auto mt-2 mr-md-0 mr-lg-5 ">
-                  <li className="nav-item mx-md-auto ml-lg-5">
+                  <li className="nav-item mx-md-0 ml-lg-5">
                     <Link to="/" className="nav-link">
                       <div className="col-5 col-sm-auto mx-auto text-center">
                         HOME
-                        <div
-                          className="navborder  mx-sm-4 mx-md-2 mx-lg-1"
-                          id="homeborder"
-                        ></div>
+                        <div className="navborder" id="homeborder"></div>
                       </div>
                     </Link>
                   </li>
@@ -56,10 +57,7 @@ class NavPage extends Component {
                     <Link to="/about" className="nav-link">
                       <div className="col-5 col-sm-auto mx-auto text-center">
                         ABOUT
-                        <div
-                          className="navborder  mx-sm-4 mx-md-2 mx-lg-1"
-                          id="aboutborder"
-                        ></div>
+                        <div className="navborder" id="aboutborder"></div>
                       </div>
                     </Link>
                   </li>
@@ -67,24 +65,10 @@ class NavPage extends Component {
                     <Link to="/medx" className="nav-link">
                       <div className="col-5 col-sm-auto mx-auto text-center">
                         CASE STUDY
-                        <div
-                          className="navborder  mx-sm-4 mx-md-2 mx-lg-1"
-                          id="portfolioborder"
-                        ></div>
+                        <div className="navborder" id="portfolioborder"></div>
                       </div>
                     </Link>
                   </li>
-                  {/* <li className="nav-item ml-lg-5">
-                    <Link to="/blog" className="nav-link">
-                      <div className="col-5 col-sm-auto mx-auto text-center">
-                        BLOG
-                        <div
-                          className="navborder mx-sm-4 mx-md-2 mx-lg-1"
-                          id="blogborder"
-                        ></div>
-                      </div>
-                    </Link>
-                  </li> */}
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
@@ -96,6 +80,9 @@ class NavPage extends Component {
 }
 
 const NavContainer = styled.nav`
+  --linkBorderSize: 6px;
+  --linkBorderWidth: 32px;
+
   .navbar-expand-sm {
     background-color: var(--mainWhite) !important;
     color: white !important;
@@ -109,37 +96,38 @@ const NavContainer = styled.nav`
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0.8rem;
-    right: 0.8rem;
-
+    width: 60px;
+    height: 100%;
+    left: calc(50% - 30px);
     &:hover {
-      border-bottom: 3px solid var(--brightGreen) !important;
+      border-bottom: 6px solid var(--brightGreen) !important;
     }
   }
+
+  li {
+    margin-bottom: 0;
+  }
+
   #homeborder {
     border-bottom: ${props =>
       props.pathname === ""
-        ? "3px solid var(--brightGreen) !important "
-        : "3px solid var(--mainWhite) !important"};
+        ? "6px solid var(--brightGreen) !important"
+        : "6px solid var(--mainWhite) !important"};
   }
+
   #portfolioborder {
     border-bottom: ${props =>
-      props.pathname === "portfolio"
-        ? "3px solid var(--brightGreen) !important  "
-        : "3px solid var(--mainWhite) !important"};
+      props.pathname === "medx"
+        ? "6px solid var(--brightGreen) !important  "
+        : "6px solid var(--mainWhite) !important"};
   }
   #aboutborder {
     border-bottom: ${props =>
       props.pathname === "about"
-        ? "3px solid var(--brightGreen) !important  "
-        : "3px solid var(--mainWhite) !important"};
+        ? "6px solid var(--brightGreen) !important  "
+        : "6px solid var(--mainWhite) !important"};
   }
-  #blogborder {
-    border-bottom: ${props =>
-      props.pathname === "blog"
-        ? "3px solid var(--brightGreen) !important  "
-        : "3px solid var(--mainWhite) !important"};
-  }
+
   .nav-link {
     color: var(--mainDark) !important;
     &:hover {
@@ -148,5 +136,4 @@ const NavContainer = styled.nav`
     }
   }
 `
-// const NavPage = withRouter(NavbarPage)
 export default NavPage

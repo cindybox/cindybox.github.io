@@ -1,6 +1,5 @@
 import React from "react"
 import { FaArrowDown } from "react-icons/fa"
-import { Link } from "gatsby"
 import IntroContainer from "./IntroContainer"
 import { Transition } from "react-spring/renderprops"
 
@@ -9,7 +8,7 @@ const Intro = () => (
     <IntroContainer>
       <section id="intro" class="container intro mt-5 pt-5">
         <div className="col">
-          <h1 class="intro-p1 mb-5">
+          <h1 className="intro-p1 mb-5">
             <span className="hi">
               <Transition
                 items={[{ text: "HI, I AM", key: 1 }]}
@@ -68,16 +67,16 @@ const Intro = () => (
             </Transition>
           </h1>
 
-          <h1 class="text-subtitle">
-            View Some of My Projects{" "}
+          <h1 className="text-subtitle">
+            View Some of My Projects
             <FaArrowDown
               style={{ color: "var(--brightGreen)", fontSize: "120%" }}
             />
           </h1>
 
-          <div class="next-page">
+          <div className="next-page">
             <a href="#">
-              <i class="fas fa-arrow-down"></i>
+              <i className="fas fa-arrow-down"></i>
             </a>
           </div>
         </div>

@@ -2,11 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import classNames from "classnames"
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2,
-} from "react-html-parser"
+import ReactHtmlParser from "react-html-parser"
 
 const Img = props => (
   <div className="col-12 col-lg-6 p-3">
@@ -53,7 +49,7 @@ const Text = props => (
       </strong>
       <br />
       <br />
-      <ul>{ReactHtmlParser(props.projectInfo.projectDescription)} </ul>
+      <span>{ReactHtmlParser(props.projectInfo.projectDescription)} </span>
     </p>
     <div className="text-right">
       <Link

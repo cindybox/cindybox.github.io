@@ -8,12 +8,29 @@
   --mainDark: #232528;
   --brightGreen: #03e6af;
   --darkGreen: #01c09e;
-  /* --mainNavy: #2b3441; */
   --mainYellow: #ffa400;
   --mainNavy: #191a37;
   --lightNavy: #5c5d7f;
   --mainOrange: #d57e26;
   --lightBlue: #00c8ff;
+
+  --headlineSubSize: 36px;
+  --ProjectSubSize: 32px;
+  --textSubSize: 24px;
+
+  --headlineSubSizeMin: 26px;
+  --projectSubSizeMin: 22px;
+  --textSubSizeMin: 18px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
 }
 body,
 footer {
@@ -30,29 +47,28 @@ footer {
 .medx {
   background-color: #fff;
 }
-/*text type*/
 
+/*text type*/
 .text-subtitle {
-  font-size: 1.6rem;
+  font-size: var(--headlineSubSize);
   color: var(--lightGrey);
-  line-height: 2rem;
+  /* line-height: 2rem; */
 }
 
 .project-title {
-  font-size: 1.4rem;
+  font-size: var(--projectSubSize);
   color: var(--mainDark);
-  line-height: 2rem;
+  /* line-height: 2rem; */
 }
 .text-highlight {
   color: var(--brightGreen);
-  font-size: 1.4rem;
-
-  line-height: 2rem;
+  font-size: var(--projectSubSize);
 }
+
 .skill-title {
-  font-size: 1.2rem;
+  font-size: var(--textSubSize);
   color: var(--mainDark);
-  line-height: 2rem;
+  line-height: 110%;
 }
 .text-muted {
   color: var(--lightGrey) !important;
@@ -86,14 +102,6 @@ footer {
   color: #fb9126;
 }
 
-/*
-.contact .social-buttons {
-  margin: 15px auto;
-}
-.contact .connect-text {
-  color: #2699fb;
-} */
-
 @media screen and (max-width: 1000px) {
   .about .skill-content {
     flex-flow: column wrap;
@@ -116,71 +124,33 @@ footer {
   }
 }
 
-/*
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
-
-@media (min-width: 1281px) {
-   {
-    /*CSS */
+@media screen and (max-width: 480px) {
+  .container {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .text-subtitle {
+    font-size: var(--headlineSubSizeMin);
+  }
+  .project-title {
+    font-size: var(--projectSubSizeMin);
+  }
+  .text-highlight {
+    font-size: var(--projectSubSizeMin);
+  }
+  .skill-title {
+    font-size: var(--textSubSizeMin);
   }
 }
-
-/*
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-   {
-    /*CSS */
+@media screen and (min-width: 480px) and (max-width: 1200px) {
+  .text-subtitle {
+    font-size: calc(var(--headlineSubSizeMin) + 1.3889 * (1vw - 4.8px));
   }
-}
-
-/*
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) {
-   {
-    /*CSS */
+  .project-title,
+  .text-highlight {
+    font-size: calc(var(--projectSubSizeMin) + 1.3889 * (1vw - 4.8px));
   }
-}
-
-/*
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .text-subtitle,
-  .text-strong {
-    font-size: 1.4rem;
-  }
-}
-
-/*
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-
-@media (min-width: 481px) and (max-width: 767px) {
-  .text-subtitle,
-  .text-strong {
-    font-size: 1.2rem;
-  }
-}
-
-/*
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
-
-@media (min-width: 320px) and (max-width: 480px) {
-  .text-subtitle,
-  .text-strong {
-    font-size: 1rem; /*1*/
+  .skill-title {
+    font-size: calc(var(--textSubSizeMin) + 1.11 * (1vw - 4.8px));
   }
 }

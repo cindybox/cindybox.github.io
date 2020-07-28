@@ -1,12 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Navbar from "../globals/Navbar"
 import Footer from "../globals/Footer"
-
-import styled from "styled-components"
 
 import page1 from "../images/planterlanddesign/planterlandpage_Page_1.jpg"
 import page2 from "../images/planterlanddesign/planterlandpage_Page_2.jpg"
@@ -37,11 +34,6 @@ const Blog = () => (
       </div>
     </div>
 
-    {/*  {Planterlanddesign.map(imgurl => (
-        <img url={imgurl} alt="img" />
-      ))} */}
-
-    {/*<Projects />*/}
     <Footer />
   </Layout>
 )

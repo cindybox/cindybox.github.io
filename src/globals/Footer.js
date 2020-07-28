@@ -1,7 +1,5 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
-import logo from "../images/logo.png"
-import styled from "styled-components"
+
 import {
   FaGithubSquare,
   FaDribbbleSquare,

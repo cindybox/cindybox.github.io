@@ -1,5 +1,4 @@
-import React, { Component } from "react"
-import { Link } from "gatsby"
+import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -18,9 +17,6 @@ import iteration from "../images/medx/medx-iteration.jpg"
 import whereweare from "../images/medx/medx-whereweare.jpg"
 import signup from "../images/medx/signup.mp4"
 
-
-import styled from "styled-components"
-
 const Medx = () => (
   <Layout>
     <SEO title="Medx" />
@@ -29,8 +25,8 @@ const Medx = () => (
 
     <div className="container mt-5 p-sm-1 p-lg-5 medx">
       <div className="row mb-5">
-        <h3 className="mb-5"> Medx Pharmacy</h3>
-        <div className="col-sm-12 col-lg-10  mx-auto">
+        <div className="col-11 col-lg-10  mx-auto">
+          <h3 className="mb-5"> Medx Pharmacy</h3>
           <img src={medxresponsive} alt="img" style={{ width: "100%" }} />
           <div className=" d-flex justify-content-end">
             <a
@@ -41,7 +37,7 @@ const Medx = () => (
             </a>
           </div>
         </div>
-        <div className="col-lg-10  mx-auto">
+        <div className="col-11 col-lg-10  mx-auto">
           <h5> Tools Used:</h5>
           <span class=" btn  btn-solidgreen mb-4"> React</span> &emsp;
           <span class=" btn  btn-solidgreen mb-4"> Bootstrap</span> &emsp;
@@ -113,29 +109,29 @@ const Medx = () => (
                 employees, we mapped out the user group that we are targeting:
               </p>
               <p>
-                <strong>Existing Customers:</strong>Existing customers are customers who have filled prescriptions
-                with the pharmacy before. Their main goal is get the
-                prescription refilled easily and quickly. During the project
-                period, MedX is converting from manually handling the refill
-                request to automatic system through a third party application.
-                So the website will need to redirect all the refill requests to
-                the 3rd party portal.
+                <strong>Existing Customers:</strong>Existing customers are
+                customers who have filled prescriptions with the pharmacy
+                before. Their main goal is get the prescription refilled easily
+                and quickly. During the project period, MedX is converting from
+                manually handling the refill request to automatic system through
+                a third party application. So the website will need to redirect
+                all the refill requests to the 3rd party portal.
               </p>
               <p>
-                <strong>New/Transfer customers:</strong> These are people who have never filled
-                  prescriptions with MedX before. They come to the website to
-                  learn about the offerings and benefits, so they can make
-                  informed decisions. The information in regards to transferring
-                  should be readily accessible and easy to follow.
+                <strong>New/Transfer customers:</strong> These are people who
+                have never filled prescriptions with MedX before. They come to
+                the website to learn about the offerings and benefits, so they
+                can make informed decisions. The information in regards to
+                transferring should be readily accessible and easy to follow.
               </p>
               <p>
-                <strong>Partners:</strong>As a full-service pharmacy, MedX has other service sections that
-                  are bringing revenues such as compounding, personal injury, and
-                  hospice care program. These business sections are operated
-                  through collaboration, and it is in MedX’s interest to provide
-                  these partners (medical practitioners, senior home
-                  administration, personal injury lawyer, etc) information they
-                  need on the website.
+                <strong>Partners:</strong>As a full-service pharmacy, MedX has
+                other service sections that are bringing revenues such as
+                compounding, personal injury, and hospice care program. These
+                business sections are operated through collaboration, and it is
+                in MedX’s interest to provide these partners (medical
+                practitioners, senior home administration, personal injury
+                lawyer, etc) information they need on the website.
               </p>
               <br />
               <img src={persona1} alt="img" style={{ width: "50%" }} />
@@ -195,14 +191,9 @@ const Medx = () => (
                 of two different options to include the sign up form:
               </p>
               <video controls style={{ width: "100%" }}>
-
-
-
-                <source src={signup}
-                  type="video/mp4" />
-
+                <source src={signup} type="video/mp4" />
                 Sorry, your browser doesn't support embedded videos.
-</video>
+              </video>
             </section>
             <section className="mb-5">
               <h4> Where We Are Now </h4>
