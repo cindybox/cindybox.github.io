@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const IntroContainer = styled.div`
+  --scaleTextBlock: 1;
   .intro {
     margin-bottom: 10% !important;
     color: var(--mainDark);
@@ -10,19 +11,31 @@ const IntroContainer = styled.div`
 
   .intro-p1 {
     font-size: 26px;
-    line-height: 120%;
     letter-spacing: 0.03em;
   }
 
   .intro-p1 .hi {
     color: var(--brightGreen);
-    line-height: 180%;
     letter-spacing: 0.12em;
   }
 
   .intro-p1 strong {
     font-size: 30px;
     letter-spacing: 0.07em;
+  }
+
+  .arrow {
+    animation: arrow-down 2s 0.5s infinite ease-in;
+  }
+
+  @keyframes arrow-down {
+    70% {
+      transform: translateY(50%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
   }
 
   @media screen and (min-width: 1200px) {
