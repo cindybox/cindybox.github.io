@@ -1,30 +1,47 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
 import classNames from "classnames"
+import { graphql, Link, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
+import React from "react"
 import ReactHtmlParser from "react-html-parser"
+import styled from "styled-components"
 
-const Img = props => (
-  <div className="col-12 col-lg-6 p-3">
-    <div className="projectImageContainer">
-      <a href={props.projectInfo.projectUrl}>
-        <img
-          alt="..."
-          class="img-raised"
-          src={props.projectInfo.imgUrl}
-          style={{
-            width: "100vw",
-            objectFit: "contain",
-            objectPosition: "50% 50%",
-          }}
-        />
-        <div className="projectLink text-capitalize d-flex justify-content-center align-items-center">
-          View It Live
-        </div>
-      </a>
+const Image = ({ projectInfo }) => {
+  const { imgUrl, projectUrl } = projectInfo
+
+  const allImages = useStaticQuery(
+    graphql`
+      query {
+        allImageSharp {
+          nodes {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const selectedImg = allImages.allImageSharp.nodes.filter(node => {
+    let pathStrings = node.fluid.src.split("/")
+    return pathStrings[pathStrings.length - 1] === imgUrl
+  })
+
+  return (
+    <div className="col-12 col-lg-6 p-3">
+      <div className="projectImageContainer">
+        <a href={projectUrl}>
+          <Img fluid={selectedImg[0].fluid} />
+          <div className="projectLink text-capitalize d-flex justify-content-center align-items-center">
+            View It Live
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
-)
+  )
+}
+
+//run query here to get pictures whose reltaive position name matches project.imgUrl
 
 const Text = props => (
   <div className={props.classname}>
@@ -62,31 +79,32 @@ const Text = props => (
   </div>
 )
 
-const SelectedProject = props => {
+const SelectedProject = ({ projectInfo }) => {
   const textAbove = classNames("col-12", "col-lg-6", "p-3", {
-    textAbove: props.imageLeft === "false",
+    textAbove: projectInfo.imageLeft === "false",
   })
 
   const textBelow = classNames("col-12", "col-lg-6", "p-3", {
-    textBelow: props.imageLeft === "false",
+    textBelow: projectInfo.imageLeft === "false",
   })
+
   return (
-    <ProjectContainer imageLeft={props.imageLeft}>
+    <ProjectContainer imageLeft={projectInfo.imageLeft}>
       <div className="row my-5">
         <section id="projects" class="project container mb-3">
           <div class="container text-center mt-5">
-            <div class="row mt-5 mb-5 p-3">
-              {props.imageLeft === "true" ? (
+            <div class=" row mt-5 mb-5 p-3" width="300px">
+              {projectInfo.imageLeft === "true" ? (
                 <React.Fragment>
-                  <Img projectInfo={props.projectInfo} />
-                  <Text projectInfo={props.projectInfo} classname={textAbove} />
+                  <Image projectInfo={projectInfo} />
+                  <Text projectInfo={projectInfo} classname={textAbove} />
                 </React.Fragment>
               ) : (
                 <React.Fragment>
-                  <Text projectInfo={props.projectInfo} classname={textAbove} />
-                  <Img projectInfo={props.projectInfo} />
+                  <Text projectInfo={projectInfo} classname={textAbove} />
+                  <Image projectInfo={projectInfo} />
                   <Text
-                    projectInfo={props.projectInfo}
+                    projectInfo={projectInfo}
                     textBelow
                     classname={textBelow}
                   />
@@ -159,4 +177,5 @@ const ProjectContainer = styled.div`
     }
   }
 `
+
 export default SelectedProject

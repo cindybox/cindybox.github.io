@@ -21,6 +21,7 @@
     "gatsby-remark-images-contentful": "^2.3.10",
     "gatsby-source-contentful": "^2.3.21",
     "gatsby-source-filesystem": "^2.3.23",
+    "gatsby-transformer-json": "^2.4.11",
     "gatsby-transformer-sharp": "^2.5.10",
     "gatsby-transformer-sqip": "^2.3.17",
     "gh-pages": "^2.1.1",

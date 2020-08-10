@@ -8,25 +8,44 @@ import Footer from "../globals/Footer"
 import Intro from "../components/intro/Intro"
 
 import SelectedProject from "../components/project/SelectedProject"
-import projectdata from "../projectInfo.json"
+// import projectdata from "../data/projectInfo.json"
 
-class IndexPage extends Component {
-  render() {
-    return (
-      <Layout>
-        <Navbar />
-        <Intro />
-        {projectdata.projects.map(project => (
-          <SelectedProject
-            projectInfo={project}
-            imageLeft={project.imageLeft}
-          />
-        ))}
+import { graphql } from "gatsby"
 
-        <Footer />
-      </Layout>
-    )
-  }
+export default function IndexPage({ data }) {
+  const projects = data.allDataJson.edges[0].node.projects
+
+  const images = data.allDataJson.edges[0].node.projects
+  return (
+    <Layout>
+      <Navbar />
+      <Intro />
+      {projects.map(project => (
+        <SelectedProject projectInfo={project} imageLeft={project.imageLeft} />
+      ))}
+
+      <Footer />
+    </Layout>
+  )
 }
 
-export default IndexPage
+export const query = graphql`
+  query {
+    allDataJson {
+      edges {
+        node {
+          projects {
+            projectName
+            imgUrl
+            projectUrl
+            githubUrl
+            projectType
+            projectDescription
+            imageLeft
+            moreinfo
+          }
+        }
+      }
+    }
+  }
+`
