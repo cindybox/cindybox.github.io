@@ -1,6 +1,6 @@
 //js version:es6
 
-import React, { Component } from "react"
+import React, { Component, useRef, useEffect } from "react"
 
 import Layout from "../components/layout"
 import Navbar from "../globals/Navbar"
@@ -20,7 +20,8 @@ export default function IndexPage({ data }) {
     <Layout>
       <Navbar />
       <Intro />
-      {projects.map(project => (
+
+      {projects.map((project, i) => (
         <SelectedProject projectInfo={project} imageLeft={project.imageLeft} />
       ))}
 

@@ -6,7 +6,7 @@ const IntroContainer = styled.div`
   .intro {
     margin-bottom: 10% !important;
     color: var(--mainDark);
-    font-family: "Avenir Next", sans-serif;
+    font-family: "Rubik", sans-serif;
   }
 
   .intro-p1 {

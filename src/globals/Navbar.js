@@ -12,12 +12,8 @@ class NavPage extends Component {
     navbarOpen: false,
     pathname: "",
   }
-  componentDidMount = () => {
-    // this.setLocation()
-  }
 
   setLocation = () => {
-    console.log(this.props.location)
     let pathname = this.props.location.pathname.slice(1)
     this.setState({ pathname: pathname })
   }

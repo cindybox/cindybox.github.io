@@ -1,9 +1,13 @@
 import classNames from "classnames"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import ReactHtmlParser from "react-html-parser"
 import styled from "styled-components"
+// import { Tween } from "react-gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import gsap from "gsap/gsap-core"
+// import { ScrollTrigger } from "gsap/all"
 
 const Image = ({ projectInfo }) => {
   const { imgUrl, projectUrl } = projectInfo
@@ -85,11 +89,31 @@ const SelectedProject = ({ projectInfo }) => {
     textBelow: projectInfo.imageLeft === "false",
   })
 
+  const projectRef = useRef(null)
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+    projectRef.current &&
+      gsap.to(projectRef.current, {
+        scrollTrigger: {
+          trigger: projectRef.current,
+          toggleActions: "restart pause none none",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        delay: 1,
+      })
+  }, [])
+
   return (
     <ProjectContainer imageLeft={projectInfo.imageLeft}>
       <div className="row my-5">
         <section id="projects" class="project container mb-3">
-          <div class="container text-center mt-5">
+          <div
+            class="container text-center mt-5 content-container"
+            ref={projectRef}
+          >
             <div class=" row mt-5 mb-5 p-3" width="300px">
               {projectInfo.imageLeft === "true" ? (
                 <React.Fragment>
@@ -117,6 +141,11 @@ const SelectedProject = ({ projectInfo }) => {
 const ProjectContainer = styled.div`
   background: ${props =>
     props.imageLeft === "true" ? "var(--veryLightGrey)" : "var(--mainWhite)"};
+
+  .content-container {
+    opacity: 0.1;
+    transform: translateY(60px);
+  }
 
   .project-desc {
     font-size: 1rem;

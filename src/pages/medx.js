@@ -62,7 +62,6 @@ const Medx = () => {
     `
   )
 
-  console.log(medxImages.allImageSharp.edges)
   return (
     <Layout>
       <SEO title="Medx" />
@@ -284,7 +283,9 @@ const Medx = () => {
                 <Img
                   fluid={
                     medxImages.allImageSharp.edges.find(
-                      edge => edge.node.fluid.originalName === medxImageNames[9]
+                      edge =>
+                        edge.node.fluid.originalName.split(".")[0] ===
+                        medxImageNames[9].split(".")[0]
                     ).node.fluid
                   }
                 />

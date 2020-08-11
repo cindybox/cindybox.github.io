@@ -28,21 +28,28 @@
   padding: 0;
   margin: 0;
 }
+
 p {
   cursor: default;
 }
 html {
   font-size: 100%;
 }
+
 body,
 footer {
-  font-family: "Calibri", sans-serif;
+  font-family: "Karla", sans-serif;
   background: var(--mainWhite) !important;
 }
 
-img {
-  max-width: 100% !important;
+nav {
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }
+
 .project_content {
   font-family: "Century Gothic", sans-serif;
   font-size: 0.8rem;
