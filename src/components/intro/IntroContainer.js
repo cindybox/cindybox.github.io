@@ -49,7 +49,8 @@ const IntroContainer = styled.div`
   }
 
   @media screen and (max-width: 1199px) and (min-width: 481px) {
-    .intro-p1 {
+    .intro-p1,
+    .intro-p1.hi {
       font-size: calc(26px + 8.889 * (1vw - 4.8px));
     }
 

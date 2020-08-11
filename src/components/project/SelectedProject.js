@@ -32,9 +32,6 @@ const Image = ({ projectInfo }) => {
       <div className="projectImageContainer">
         <a href={projectUrl}>
           <Img fluid={selectedImg[0].fluid} />
-          <div className="projectLink text-capitalize d-flex justify-content-center align-items-center">
-            View It Live
-          </div>
         </a>
       </div>
     </div>
@@ -131,7 +128,8 @@ const ProjectContainer = styled.div`
     width: 100%;
     height: 100%;
   }
-  .projectLink {
+
+  .gatsby-image-wrapper:before {
     background: rgba(0, 0, 0, 0.7);
     font-weight: bold;
     font-size: 1.2rem;
@@ -143,11 +141,14 @@ const ProjectContainer = styled.div`
     left: 0;
     bottom: 0;
     right: 0;
-    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .projectImageContainer:hover .projectLink {
-    visibility: visible;
+  .gatsby-image-wrapper:hover:before {
+    content: "View It Live";
+    z-index: 1;
   }
 
   @media (min-width: 1281px) {

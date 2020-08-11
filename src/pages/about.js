@@ -5,62 +5,85 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Navbar from "../globals/Navbar"
 import Footer from "../globals/Footer"
-import profile from "../images/profilepic.jpg"
+import { graphql, useStaticQuery } from "gatsby"
+// import profile from "../images/profilepic.jpg"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
-const About = () => (
-  <Layout>
-    <SEO title="About" />
+const About = () => {
+  const profile = useStaticQuery(
+    graphql`
+      query {
+        allImageSharp(
+          filter: { fluid: { originalName: { eq: "profile.jpg" } } }
+        ) {
+          edges {
+            node {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+  console.log(profile.allImageSharp.edges[0].node.fluid)
 
-    <Navbar />
+  return (
+    <Layout>
+      <SEO title="About" />
 
-    <AboutContainer>
-      <div className="container mt-5 p-md-5">
-        <div className="row mb-5">
-          <div className="col-11 col-md-4  mx-auto">
-            <div className="d-flex justify-content-center">
-              <img src={profile} alt="profile" className="profilepic" />
+      <Navbar />
+
+      <AboutContainer>
+        <div className="container mt-5 p-md-5">
+          <div className="row mb-5">
+            <div className="col-11 col-md-4  mx-auto">
+              <Img fluid={profile.allImageSharp.edges[0].node.fluid} />
+              {/* <div className="d-flex justify-content-center">
+                <Img fluid={profile.allImageSharp.edges[0].node.fluid} />
+                <img src={profile} alt="profile" className="profilepic" /> */}
+              {/* </div> */}
             </div>
-          </div>
-          <div className="col-11 col-md-8 mx-auto">
-            <div className="border-bottom">
-              {" "}
-              <h3 style={{ color: "var(--mainDark)" }}> Design + Code </h3>
-              <h5 className="mb-3"> Endless Possibility </h5>
-            </div>
+            <div className="col-11 col-md-8 mx-auto">
+              <div className="border-bottom">
+                <h3 style={{ color: "var(--mainDark)" }}> Design + Code </h3>
+                <h5 className="mb-3"> Endless Possibility </h5>
+              </div>
 
-            <p className="about-desc mt-3" style={{ lineHeight: "1.8rem" }}>
-              I am a problem solver. That is why both design and coding are so
-              intriguing to me.
-              <br style={{ lineHeight: "3rem" }} />
-              I have been a landscape architect for years. This experience has
-              not only given me a keen sense of aesthetics, but more
-              importantly, how to design around users.
-              <br style={{ lineHeight: "3rem" }} />
-              Now I design and build web applications that focus on enhanced
-              user experience. Leveraging on my prior experience working in the
-              design field, a versatile skillset, and strong learning ability, I
-              bring insight, innovation, and effeciency to my work.
-              <br />
-              <br />
-            </p>
-            {/* <div className="text-subtitle text-capitalize ">
+              <p className="about-desc mt-3" style={{ lineHeight: "1.8rem" }}>
+                I am a problem solver. That is why both design and coding are so
+                intriguing to me.
+                <br style={{ lineHeight: "3rem" }} />
+                I have been a landscape architect for years. This experience has
+                not only given me a keen sense of aesthetics, but more
+                importantly, how to design around users.
+                <br style={{ lineHeight: "3rem" }} />
+                Now I design and build web applications that focus on enhanced
+                user experience. Leveraging on my prior experience working in
+                the design field, a versatile skillset, and strong learning
+                ability, I bring insight, innovation, and effeciency to my work.
+                <br />
+                <br />
+              </p>
+              {/* <div className="text-subtitle text-capitalize ">
 							Check One of My Design Case Study&emsp;
 							<Link to="/blog">
 								<FaArrowRight style={{ color: 'var(--brightGreen)', fontSize: '120%' }} />
 							</Link>
 						</div> */}
-            <div className="text-subtitle text-capitalize ">
-              find my resume here&emsp;
-              <Link to="/resume">
-                <FaArrowRight
-                  style={{ color: "var(--brightGreen)", fontSize: "120%" }}
-                />
-              </Link>
-            </div>
-          </div>{" "}
-        </div>
-        {/*  <div className="row">
+              <div className="text-subtitle text-capitalize ">
+                find my resume here&emsp;
+                <Link to="/resume">
+                  <FaArrowRight
+                    style={{ color: "var(--brightGreen)", fontSize: "120%" }}
+                  />
+                </Link>
+              </div>
+            </div>{" "}
+          </div>
+          {/*  <div className="row">
             <div className="col-10 text-highlight text-uppercase">
               <h3> Skills</h3>
             </div>
@@ -74,11 +97,12 @@ const About = () => (
               <div className="text-title"> Web </div> <ul> </ul>
             </div>
           </div>*/}
-      </div>
-    </AboutContainer>
-    <Footer />
-  </Layout>
-)
+        </div>
+      </AboutContainer>
+      <Footer />
+    </Layout>
+  )
+}
 
 const AboutContainer = styled.div`
   color: var(--mainGrey) !important;

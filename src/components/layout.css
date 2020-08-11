@@ -39,6 +39,10 @@ footer {
   font-family: "Calibri", sans-serif;
   background: var(--mainWhite) !important;
 }
+
+img {
+  max-width: 100% !important;
+}
 .project_content {
   font-family: "Century Gothic", sans-serif;
   font-size: 0.8rem;
@@ -157,12 +161,12 @@ footer {
     font-size: var(--textSubSizeMin);
   }
 }
+
 @media screen and (min-width: 480px) and (max-width: 1200px) {
   .text-subtitle {
     font-size: calc(var(--headlineSubSizeMin) + 1.3889 * (1vw - 4.8px));
   }
-  .project-title,
-  .text-highlight {
+  .project-title {
     font-size: calc(var(--projectSubSizeMin) + 1.3889 * (1vw - 4.8px));
   }
   .skill-title {
