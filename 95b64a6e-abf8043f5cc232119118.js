@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{IdFE:function(t,n,a){"use strict";a.d(n,"a",(function(){return e}));var d=a("Lnxd"),e=function(t){return Object(d.a)({tag:"svg",attr:{viewBox:"0 0 512 512"},child:[{tag:"path",attr:{d:"M64 384h384v-42.666H64V384zm0-106.666h384v-42.667H64v42.667zM64 128v42.665h384V128H64z"}}]})(t)};e.displayName="IoMdMenu"}}]);
-//# sourceMappingURL=95b64a6e-abf8043f5cc232119118.js.map

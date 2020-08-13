@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{E6xs:function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),l=a.n(n),c=a("Bl7J"),r=a("vrFN");t.default=function(){return l.a.createElement(c.a,null,l.a.createElement(r.a,{title:"Portfolio"}),l.a.createElement("div",{className:"container-fluid mt-5 d-flex align-items-center ",style:{height:"75vh"}},l.a.createElement("div",{className:"col-10 text-center mx-auto"},l.a.createElement("h5",null," THIS PAGE IS UNDER DEVELOPMENT"))))}}}]);
+//# sourceMappingURL=component---src-pages-portfolio-js-d032bb3b24012f2dbf09.js.map
