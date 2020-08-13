@@ -4,10 +4,8 @@ import Img from "gatsby-image"
 import React, { useEffect, useRef } from "react"
 import ReactHtmlParser from "react-html-parser"
 import styled from "styled-components"
-// import { Tween } from "react-gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import gsap from "gsap/gsap-core"
-// import { ScrollTrigger } from "gsap/all"
 
 const Image = ({ projectInfo }) => {
   const { imgUrl, projectUrl } = projectInfo
@@ -32,7 +30,7 @@ const Image = ({ projectInfo }) => {
   })
 
   return (
-    <div className="col-12 col-lg-6 p-3">
+    <div className="col-12 col-lg-6 px-3">
       <div className="projectImageContainer">
         <a href={projectUrl}>
           <Img fluid={selectedImg[0].fluid} />
@@ -47,7 +45,7 @@ const Image = ({ projectInfo }) => {
 const Text = props => (
   <div className={props.classname}>
     <div className="text-left ">
-      <p className="project-title text-uppercase">
+      <p className="project-title">
         <strong> {props.projectInfo.projectName}</strong>
       </p>
       <div className="row">
@@ -60,13 +58,6 @@ const Text = props => (
     </div>
 
     <p class="project-desc mt-4">
-      <strong>
-        <em style={{ color: "var(--lightGrey)" }}>
-          {props.projectInfo.projectType}
-        </em>
-      </strong>
-      <br />
-      <br />
       <span>{ReactHtmlParser(props.projectInfo.projectDescription)} </span>
     </p>
     <div className="text-right">
@@ -81,11 +72,11 @@ const Text = props => (
 )
 
 const SelectedProject = ({ projectInfo }) => {
-  const textAbove = classNames("col-12", "col-lg-6", "p-3", {
+  const textAbove = classNames("col-12", "col-lg-6", "px-3", {
     textAbove: projectInfo.imageLeft === "false",
   })
 
-  const textBelow = classNames("col-12", "col-lg-6", "p-3", {
+  const textBelow = classNames("col-12", "col-lg-6", "px-3", {
     textBelow: projectInfo.imageLeft === "false",
   })
 
@@ -101,20 +92,20 @@ const SelectedProject = ({ projectInfo }) => {
         },
         opacity: 1,
         y: 0,
-        duration: 1,
-        delay: 1,
+        duration: 0.6,
+        delay: 2,
       })
   }, [])
 
   return (
     <ProjectContainer imageLeft={projectInfo.imageLeft}>
-      <div className="row my-5">
-        <section id="projects" class="project container mb-3">
+      <div className="row ">
+        <section id="projects" class="project container mt-5">
           <div
             class="container text-center mt-5 content-container"
             ref={projectRef}
           >
-            <div class=" row mt-5 mb-5 p-3" width="300px">
+            <div class=" row mt-5 px-3" width="300px">
               {projectInfo.imageLeft === "true" ? (
                 <React.Fragment>
                   <Image projectInfo={projectInfo} />
@@ -144,9 +135,11 @@ const ProjectContainer = styled.div`
 
   .content-container {
     opacity: 0.1;
-    transform: translateY(60px);
+    transform: translateY(100px);
   }
-
+  .gatsby-image-wrapper {
+    box-shadow: 1px 1px 5px 4px rgba(0, 0, 0, 0.1);
+  }
   .project-desc {
     font-size: 1rem;
     text-align: left;
@@ -199,6 +192,9 @@ const ProjectContainer = styled.div`
   }
 
   @media (max-width: 998px) {
+    .project-title {
+      margin-top: 2rem !important;
+    }
     .textBelow {
       display: block !important;
     }

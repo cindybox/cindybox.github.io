@@ -2,8 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Navbar from "../globals/Navbar"
-import Footer from "../globals/Footer"
+
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
@@ -30,7 +29,7 @@ const Planterland = () => {
   return (
     <Layout>
       <SEO title="Planterland" />
-      <Navbar />
+
       <div className="container mt-5 p-sm-1 p-lg-5">
         <div className="row mb-5">
           <div className="col-11 col-lg-10 mx-auto">
@@ -78,8 +77,6 @@ const Planterland = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </Layout>
   )
 }

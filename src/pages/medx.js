@@ -2,8 +2,6 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Navbar from "../globals/Navbar"
-import Footer from "../globals/Footer"
 
 //convert all the images to gatsby image
 import signup from "../images/medx/signup.mp4"
@@ -65,7 +63,6 @@ const Medx = () => {
   return (
     <Layout>
       <SEO title="Medx" />
-      <Navbar />
 
       <div className="container mt-5 p-sm-1 p-lg-5 medx">
         <div className="row mb-5">
@@ -280,7 +277,7 @@ const Medx = () => {
                   multiple stakeholders. There are various feedbacks, such as
                   relocating the ‘How to Start’ section to the main page.
                 </p>
-                <Img
+                {/* <Img
                   fluid={
                     medxImages.allImageSharp.edges.find(
                       edge =>
@@ -288,7 +285,7 @@ const Medx = () => {
                         medxImageNames[9].split(".")[0]
                     ).node.fluid
                   }
-                />
+                /> */}
 
                 <p className="pt-2">
                   We also added the membership sign up component. Here is a demo
@@ -320,8 +317,6 @@ const Medx = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </Layout>
   )
 }

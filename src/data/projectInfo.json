@@ -6,7 +6,7 @@
       "projectUrl": "https://admiring-beaver-c389fd.netlify.com",
       "githubUrl": "https://github.com/cindybox/medx-demo",
       "projectType": "Professional Project. Design and Develop",
-      "projectDescription": "<li>UI and UX Designed and Prototyped in Adobe XD, Adobe Indesign, and Adobe Photoshop</li> <li>Designed graphics including banner image and icons</li><li>Developed in React</li><li>Fully Responsive Design</li>",
+      "projectDescription": "Redesigned and developed the website for MedX pharmacy to align with their rebranding effort and create a strong digital presence",
       "imageLeft": "true",
       "moreinfo": "/medx"
     },
@@ -16,7 +16,7 @@
       "projectUrl": "https://planterland.herokuapp.com/",
       "githubUrl": "https://github.com/cindybox/Shopping---Planterland",
       "projectType": "Personal Project. Design and Develop",
-      "projectDescription": "<li>UI, UX and Branding Elements Designed and Prototyped in Adobe XD, Adobe Indesign, and Adobe Photoshop</li> <li>MongoDB-Express-React-Node stack development</li><li>User Authentication with Passport</li><li>Utilized React Context to pass Props</li><li>Fully Responsive Design</li>",
+      "projectDescription": "An planter ecommerce site showcasing elegance and minimum design, built using MERN stack",
       "imageLeft": "false",
       "moreinfo": "/planterland"
     },
@@ -27,7 +27,7 @@
       "projectUrl": "https://optimistic-khorana-27037b.netlify.com/",
       "githubUrl": "https://github.com/chingu-voyages/v9-geckos-team-19",
       "projectType": "Team Project. Part of UI, build landing and two components",
-      "projectDescription": "<li>UI Design in Photoshop</li><li>Front end developed in React</li><li>Utilized Telescope API</li><li>Fully Responsive Design</li>",
+      "projectDescription": "A utility app utilizing third party API to present useful city data",
       "imageLeft": "true",
       "moreinfo": "/cityscope"
     }

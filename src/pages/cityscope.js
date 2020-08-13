@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Navbar from "../globals/Navbar"
-import Footer from "../globals/Footer"
+import Navbar from "../components/globals/Navbar"
+import Footer from "../components/globals/Footer"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 

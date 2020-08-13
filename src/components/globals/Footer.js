@@ -1,4 +1,5 @@
-import React, { Component } from "react"
+import React from "react"
+import styled from "styled-components"
 
 import {
   FaGithubSquare,
@@ -7,11 +8,29 @@ import {
   FaInstagram,
 } from "react-icons/fa"
 
-class Footer extends Component {
-  render() {
-    return (
-      <div className="row">
-        <div className="col-4 col-md-3 col-lg-2 mx-auto my-5">
+const Footer = () => {
+  return (
+    <FooterContainer>
+      <h6
+        style={{
+          color: "var(--brightGreen)",
+          textAlign: "center",
+          paddingTop: "2rem",
+        }}
+      >
+        cindybox.33@gmail.com
+      </h6>
+      <small
+        style={{
+          color: "var(--mainWhite)",
+          textAlign: "center",
+          paddingLeft: "2rem",
+        }}
+      >
+        @ 2020 Cindy Tong | Built With Gatsby
+      </small>
+      {/* <div className="row">
+        <div className="col-4 col-md-3 col-lg-2 mx-auto mt-2 mb-5">
           <div className="d-flex flex-row justify-content-around">
             <div>
               <a href="https://github.com/cindybox" className="social-icon">
@@ -41,9 +60,12 @@ class Footer extends Component {
             </div>
           </div>
         </div>
-      </div>
-    )
-  }
+      </div> */}
+    </FooterContainer>
+  )
 }
 
+const FooterContainer = styled.div`
+  background-color: var(--mainDark);
+`
 export default Footer

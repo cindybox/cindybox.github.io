@@ -15,11 +15,11 @@
   --lightBlue: #00c8ff;
 
   --headlineSubSize: 36px;
-  --ProjectSubSize: 32px;
+  --projectSubSize: 26px;
   --textSubSize: 24px;
 
   --headlineSubSizeMin: 26px;
-  --projectSubSizeMin: 22px;
+  --projectSubSizeMin: 20px;
   --textSubSizeMin: 18px;
 }
 
@@ -29,6 +29,15 @@
   margin: 0;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+a:hover {
+  text-decoration: none !important;
+  color: var(--mainDark) !important;
+}
 p {
   cursor: default;
 }
@@ -47,11 +56,10 @@ nav {
   left: 0;
   top: 0;
   right: 0;
-  z-index: 2;
 }
 
 .project_content {
-  font-family: "Century Gothic", sans-serif;
+  /* font-family: "Century Gothic", sans-serif; */
   font-size: 0.8rem;
 }
 .social-icon {
@@ -62,20 +70,16 @@ nav {
 }
 
 /*text type*/
+
+.project-title {
+  font-family: "Taviraj", serif;
+  font-size: var(--projectSubSize);
+  color: var(--mainDark);
+}
+
 .text-subtitle {
   font-size: var(--headlineSubSize);
   color: var(--lightGrey);
-  /* line-height: 2rem; */
-}
-
-.project-title {
-  font-size: var(--projectSubSize);
-  color: var(--mainDark);
-  /* line-height: 2rem; */
-}
-.text-highlight {
-  color: var(--brightGreen);
-  font-size: var(--projectSubSize);
 }
 
 .skill-title {
@@ -141,6 +145,7 @@ nav {
     flex-flow: column wrap;
   }
 }
+
 @media screen and (max-width: 480px) {
   .skill-cards {
     flex-flow: column wrap;
@@ -148,9 +153,6 @@ nav {
   .about .skill-content .skill-content-column {
     width: 100%;
   }
-}
-
-@media screen and (max-width: 480px) {
   .container {
     padding-left: 6px;
     padding-right: 6px;
@@ -161,22 +163,37 @@ nav {
   .project-title {
     font-size: var(--projectSubSizeMin);
   }
-  .text-highlight {
+  /* .text-highlight {
     font-size: var(--projectSubSizeMin);
-  }
+  } */
   .skill-title {
     font-size: var(--textSubSizeMin);
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 1200px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .text-subtitle {
     font-size: calc(var(--headlineSubSizeMin) + 1.3889 * (1vw - 4.8px));
   }
+
   .project-title {
-    font-size: calc(var(--projectSubSizeMin) + 1.3889 * (1vw - 4.8px));
+    font-size: 24px;
   }
+
   .skill-title {
     font-size: calc(var(--textSubSizeMin) + 1.11 * (1vw - 4.8px));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .text-subtitle {
+    font-size: var(--headlineSubSize);
+  }
+
+  .project-title {
+    font-size: var(--projectSubSize) !important;
+  }
+
+  .skill-title {
+    font-size: var(--textSubSizen);
   }
 }

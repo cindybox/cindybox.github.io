@@ -4,6 +4,7 @@ import IntroContainer from "./IntroContainer"
 import { Tween } from "react-gsap"
 import { gsap } from "gsap"
 import { CSSRulePlugin } from "gsap/all"
+import Background from "../globals/Background"
 
 const Intro = () => {
   gsap.registerPlugin(CSSRulePlugin)
@@ -22,30 +23,45 @@ const Intro = () => {
   return (
     <div>
       <IntroContainer>
-        <section id="intro" class="container intro mt-5 pt-5">
+        <Background />
+        <section id="intro" class="container intro mt-5">
           <div className="col">
             <h1 className="intro-p1 mb-5">
-              <Tween from={{ y: "-50" }} opacity={0} duration={1}>
-                <p className="text-anim text-highlight hi"> HI, I AM </p>
-              </Tween>
-
-              <Tween
-                from={{ x: "100" }}
-                opacity={0}
-                duration={1}
-                rotation={360}
-                delay={1}
-                stagger={0.1}
-              >
+              <p className="text-anim text-highlight hi">
+                <Tween
+                  from={{ y: "-50" }}
+                  opacity={0}
+                  duration={1}
+                  stagger={0.2}
+                >
+                  <span> HI,</span>
+                  <span> I </span>
+                  <span>AM</span>
+                </Tween>
+              </p>
+              <p className="text-anim">
+                <strong>
+                  <Tween
+                    from={{ x: "100" }}
+                    opacity={0}
+                    duration={1}
+                    delay={1}
+                    rotation={360}
+                    stagger={0.4}
+                  >
+                    <span>XINGLIANG </span>
+                    <span>TONG </span>
+                  </Tween>
+                </strong>
+              </p>
+              <Tween from={{ y: "50" }} opacity={0} duration={1}>
                 <p className="text-anim">
-                  <strong>XINGLIANG TONG</strong>
+                  I DESIGN AND BUILD <br />
+                  WEB APPLICATIONS
                 </p>
               </Tween>
-              <Tween from={{ y: "50" }} opacity={0} duration={1}>
-                <p className="text-anim">I DESIGN AND BUILD WEB APPLICATIONS</p>
-              </Tween>
             </h1>
-            <h1 className="text-subtitle">
+            <h1 className="intro-subtitle pt-5">
               View Some of My Projects &ensp;
               <FaArrowDown
                 className="arrow"

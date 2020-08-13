@@ -2,8 +2,6 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Navbar from "../globals/Navbar"
-import Footer from "../globals/Footer"
 
 import page1 from "../images/planterlanddesign/planterlandpage_Page_1.jpg"
 import page2 from "../images/planterlanddesign/planterlandpage_Page_2.jpg"
@@ -16,7 +14,7 @@ import page7 from "../images/planterlanddesign/planterlandpage_Page_7.jpg"
 const Blog = () => (
   <Layout background="white">
     <SEO title="Blog" />
-    <Navbar />
+
     <div className="container">
       <div className="row">
         <div className="col-10 mx-auto">
@@ -33,8 +31,6 @@ const Blog = () => (
         </div>
       </div>
     </div>
-
-    <Footer />
   </Layout>
 )
 

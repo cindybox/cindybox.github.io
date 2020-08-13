@@ -1,16 +1,19 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
-import "./bootstrap.min.css"
-import PropTypes from "prop-types"
+import "../styles/bootstrap.min.css"
 import "./layout.css"
+import PropTypes from "prop-types"
 
-const Layout = ({ children }, props) => <> {children}</>
+import Footer from "./globals/Footer"
+import Navbar from "./globals/Navbar"
+
+const Layout = ({ children }, props) => (
+  <>
+    <Navbar />
+
+    {children}
+    <Footer />
+  </>
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

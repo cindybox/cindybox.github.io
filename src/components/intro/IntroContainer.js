@@ -2,26 +2,27 @@ import React from "react"
 import styled from "styled-components"
 
 const IntroContainer = styled.div`
-  --scaleTextBlock: 1;
+  position: relative;
+
   .intro {
-    margin-bottom: 10% !important;
     color: var(--mainDark);
-    font-family: "Rubik", sans-serif;
+    padding-top: 24vh;
+    padding-bottom: 8rem;
   }
 
   .intro-p1 {
     font-size: 26px;
-    letter-spacing: 0.03em;
-  }
-
-  .intro-p1 .hi {
-    color: var(--brightGreen);
-    letter-spacing: 0.12em;
+    letter-spacing: -0.01em;
   }
 
   .intro-p1 strong {
     font-size: 30px;
+    font-weight: 900;
     letter-spacing: 0.07em;
+  }
+
+  .intro-subtitle {
+    font-size: 16px;
   }
 
   .arrow {
@@ -40,22 +41,30 @@ const IntroContainer = styled.div`
 
   @media screen and (min-width: 1200px) {
     .intro-p1 {
-      font-size: 90px;
+      font-size: 54px;
     }
 
     .intro-p1 strong {
-      font-size: 111px;
+      font-size: 86px;
+    }
+
+    .intro-subtitle {
+      font-size: 24px;
     }
   }
 
   @media screen and (max-width: 1199px) and (min-width: 481px) {
     .intro-p1,
     .intro-p1.hi {
-      font-size: calc(26px + 8.889 * (1vw - 4.8px));
+      font-size: calc(26px + 3.89 * (1vw - 4.8px));
     }
 
     .intro-p1 strong {
-      font-size: calc(30px + 11.25 * (1vw - 4.8px));
+      font-size: calc(30px + 7.78 * (1vw - 4.8px));
+    }
+
+    .intro-subtitle {
+      font-size: calc(16px + 1.111 * (1vw - 4.8px));
     }
   }
 

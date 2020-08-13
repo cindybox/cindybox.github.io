@@ -1,16 +1,14 @@
 //js version:es6
 
 import React, { Component, useRef, useEffect } from "react"
-
 import Layout from "../components/layout"
-import Navbar from "../globals/Navbar"
-import Footer from "../globals/Footer"
 import Intro from "../components/intro/Intro"
-
 import SelectedProject from "../components/project/SelectedProject"
+import Demonstration from "../components/demonstration"
 // import projectdata from "../data/projectInfo.json"
 
 import { graphql } from "gatsby"
+import About from "./about.js"
 
 export default function IndexPage({ data }) {
   const projects = data.allDataJson.edges[0].node.projects
@@ -18,14 +16,13 @@ export default function IndexPage({ data }) {
   const images = data.allDataJson.edges[0].node.projects
   return (
     <Layout>
-      <Navbar />
       <Intro />
 
       {projects.map((project, i) => (
         <SelectedProject projectInfo={project} imageLeft={project.imageLeft} />
       ))}
 
-      <Footer />
+      <Demonstration />
     </Layout>
   )
 }

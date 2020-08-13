@@ -3,8 +3,7 @@ import { Link } from "gatsby"
 import { FaArrowRight } from "react-icons/fa"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Navbar from "../globals/Navbar"
-import Footer from "../globals/Footer"
+
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
@@ -33,8 +32,6 @@ const About = () => {
     <Layout>
       <SEO title="About" />
 
-      <Navbar />
-
       <AboutContainer>
         <div className="container mt-5 p-md-5">
           <div className="row mb-5">
@@ -42,10 +39,10 @@ const About = () => {
               <Img fluid={profile.allImageSharp.edges[0].node.fluid} />
             </div>
             <div className="col-11 col-md-8 mx-auto">
-              <div className="border-bottom">
+              {/* <div className="border-bottom">
                 <h3 style={{ color: "var(--mainDark)" }}> Design + Code </h3>
                 <h5 className="mb-3"> Endless Possibility </h5>
-              </div>
+              </div> */}
 
               <p className="about-desc mt-3" style={{ lineHeight: "1.8rem" }}>
                 I am a problem solver. That is why both design and coding are so
@@ -79,7 +76,6 @@ const About = () => {
           </div>
         </div>
       </AboutContainer>
-      <Footer />
     </Layout>
   )
 }
